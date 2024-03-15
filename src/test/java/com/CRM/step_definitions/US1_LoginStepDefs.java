@@ -1,7 +1,7 @@
 package com.CRM.step_definitions;
 
 
-public class LoginStepDefs {
+public class US1_LoginStepDefs {
 
 
 
