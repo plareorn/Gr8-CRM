@@ -1,11 +1,10 @@
 Feature: Users should be able to access the Drive page.
 
-  Scenario Outline: Users should be able to access the Drive page.
-    When I go to the Drive page
-    Then I should see the Drive page
-    And I should see all "7" "<modules>"
-    Examples:
-      | modules                    |
+  Scenario: Users should be able to access the Drive page.
+    When User should go to the Drive page
+    And User should see the Drive page
+    Then User should see all the following modules
+
       | My Drive                   |
       | All Documents              |
       | Company Drive              |
