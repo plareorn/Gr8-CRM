@@ -5,6 +5,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.List;
+
 public class US13_DrivePageModuleAccess_StepDefs {
 
     DrivePage drivePage = new DrivePage();
@@ -19,6 +21,7 @@ public class US13_DrivePageModuleAccess_StepDefs {
     }
 
     @Then("User should see all the following modules")
-    public void userShouldSeeAllTheFollowingModules() {
+    public void userShouldSeeAllTheFollowingModules(List<String> expectedTopModules) {
+
     }
 }
