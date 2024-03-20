@@ -48,7 +48,8 @@ public class LoginPage {
 
 
     /**
-     * This method use parameterization, it will read given userType from feature file to log in
+     * This method use parameterization, it will read given userType from feature file and read the log in credentials
+     * from configuration.properties. userTypes are: "hr", "marketing", "helpdesk"
      *
      * @param userType
      */
