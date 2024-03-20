@@ -41,7 +41,7 @@ public WebElement messageBoxIframe;
 @FindBy(xpath = "//span[.='Please specify at least one person.']")
     public WebElement recipientError;
 
-@FindBy(id = "blog_post_body_513")
+@FindBy(className = "feed-post-text-block-inner-inner")
     public WebElement messageDisplayed;
 
 
