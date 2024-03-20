@@ -1,8 +1,5 @@
 package com.CRM.step_definitions;
 
-
-
-
 import com.CRM.utilities.BrowserUtils;
 import com.CRM.utilities.ConfigurationReader;
 import com.CRM.utilities.Driver;
