@@ -53,6 +53,35 @@ Feature: CRM application login functionality
       | helpdesk43@cydeo.com  | UserUser |
 
 
+    @incorrectlogincredentialserrormessage
+  Scenario Outline: Incorrect login credentials error message display
+    #Given user is on the login page
+    When user enters incorrect login credentials "<username>","<password>"
+    Then user should see error message displayed
+
+    Examples:
+      | username               | password |
+      | hr1@cydeo.com          | useruser |
+      | marketing94@cydeo.com  | useruser |
+      | helpdesk86@cydeo.com   | useruser |
+      | hr561@cydeo.com        | UserUser |
+      | Mmarketing75@cydeo.com | UserUser |
+      | helppDdesk59@cydeo.com | UserUser |
+
+
+      @remembermeonthiscomputer
+      Scenario: Remember me on this computer link verification
+        Then user should see remember me on this computer link
+        And user should be able to click to the checkbox
+
+
+        @passwordisinbulletsigns
+        Scenario: Password is in bullet sign verification
+          When password should be in bullet signs by default
+
+
+
+
 
 
 
