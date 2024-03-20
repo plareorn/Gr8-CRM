@@ -27,10 +27,12 @@ Feature: CRM application login functionality
     Then user should be able to login
 
 
+    #For this method you need to call login method and provide userType as string
+  #userTypes are: "hr", "marketing", "helpdesk" and it will read the user information from configuration,properties
   @param
   Scenario: Positive login as hr user
     #Given  user is on the login page
-    When user enters the "hr" user information
+    When user enters the "helpdesk" user information
     Then user should be able to login
 
 
@@ -53,7 +55,7 @@ Feature: CRM application login functionality
       | helpdesk43@cydeo.com  | UserUser |
 
 
-    @incorrectlogincredentialserrormessage
+  @incorrectlogincredentialserrormessage
   Scenario Outline: Incorrect login credentials error message display
     #Given user is on the login page
     When user enters incorrect login credentials "<username>","<password>"
@@ -69,15 +71,15 @@ Feature: CRM application login functionality
       | helppDdesk59@cydeo.com | UserUser |
 
 
-      @remembermeonthiscomputer
-      Scenario: Remember me on this computer link verification
-        Then user should see remember me on this computer link
-        And user should be able to click to the checkbox
+  @remembermeonthiscomputer
+  Scenario: Remember me on this computer link verification
+    Then user should see remember me on this computer link
+    And user should be able to click to the checkbox
 
 
-        @passwordisinbulletsigns
-        Scenario: Password is in bullet sign verification
-          When password should be in bullet signs by default
+  @passwordisinbulletsigns
+  Scenario: Password is in bullet sign verification
+    When password should be in bullet signs by default
 
 
 
