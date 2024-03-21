@@ -23,6 +23,16 @@ public class LoginPage {
     @FindBy(xpath = "//input[@type='submit']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement incorrectLoginOrPasswordErrorMessage;
+
+    @FindBy(xpath = "//div[@class='login-text login-item']//label")
+    public WebElement rememberMeOnThisComputerLink;
+
+    @FindBy(xpath = "//div[@class='login-text login-item']//input")
+    public WebElement getRememberMeOnThisComputerCheckbox;
+
+
 
     /**
      * This method will work reading user information from configuration.properties file
@@ -38,7 +48,8 @@ public class LoginPage {
 
 
     /**
-     * This method use parameterization, it will read given userType from feature file to log in
+     * This method use parameterization, it will read given userType from feature file and read the log in credentials
+     * from configuration.properties. userTypes are: "hr", "marketing", "helpdesk"
      *
      * @param userType
      */

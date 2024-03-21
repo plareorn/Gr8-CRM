@@ -10,8 +10,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.module.Configuration;
+import java.time.Duration;
 
 public class US1_LoginStepDefs {
 
@@ -59,4 +63,46 @@ public class US1_LoginStepDefs {
     public void theUserLoginWith(String username, String password) {
         loginPage.login(username, password);
     }
+
+
+    @When("user enters incorrect login credentials {string},{string}")
+    public void userEntersIncorrectLoginCredentials(String username, String password) {
+        loginPage.login(username, password);
+    }
+
+
+    @Then("user should see error message displayed")
+    public void userShouldSeeErrorMessageDisplayed() {
+        String expectedIncorrectLoginOrPasswordErrorMessage = "Incorrect login or password";
+        String actualIncorrectLoginOrPasswordErrorMessage = loginPage.incorrectLoginOrPasswordErrorMessage.getText();
+
+        Assert.assertEquals(expectedIncorrectLoginOrPasswordErrorMessage, actualIncorrectLoginOrPasswordErrorMessage);
+    }
+
+
+    @Then("user should see remember me on this computer link")
+    public void userShouldSeeRememberMeOnThisComputerLink() {
+        String expectedRememberMeOnThisComputerLink = "Remember me on this computer";
+        String actualRememberMeOnThisComputerLink = loginPage.rememberMeOnThisComputerLink.getText();
+
+        Assert.assertEquals(expectedRememberMeOnThisComputerLink, actualRememberMeOnThisComputerLink);
+    }
+
+    @And("user should be able to click to the checkbox")
+    public void userShouldBeAbleToClickToTheCheckbox() {
+        Assert.assertTrue(loginPage.getRememberMeOnThisComputerCheckbox.isEnabled()
+        && loginPage.getRememberMeOnThisComputerCheckbox.isDisplayed()
+        );
+    }
+
+    @When("password should be in bullet signs by default")
+    public void passwordShouldBeInBulletSignsByDefault() {
+        String expectedPasswordType = "password";
+        String actualPasswordType = loginPage.inputPassword.getAttribute("type");
+
+        Assert.assertEquals(expectedPasswordType, actualPasswordType);
+    }
+
+
+
 }
