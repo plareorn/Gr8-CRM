@@ -41,3 +41,23 @@ Feature: User should be able to access the Employees page.
       | Birthdays           |
       | New page            |
 
+@WIP
+  Scenario: As a Hr users, Verify that user views the Company Structure as default
+
+    Given the user is logged in as a "hr"
+    When  user click on Employees button
+    Then user see the Company Structure as default
+  @WIP
+  Scenario: As a Marketing users, Verify that user views the Company Structure as default
+
+    Given the user is logged in as a "marketing"
+    When  user click on Employees button
+    Then user see the Company Structure as default
+  @WIP
+  Scenario: As a Helpdesk users, Verify that user views the Company Structure as default
+
+    Given the user is logged in as a "helpdesk"
+    When  user click on Employees button
+    Then user see the Company Structure as default
+
+
