@@ -61,6 +61,13 @@ public class US7_EmployeesStepDefs {
 
         Assert.assertEquals(ExpectedEmployeeList,actualEmployeesList);
     }
+
+    @Then("user see the Company Structure as default")
+    public void userSeeTheCompanyStructureAsDefault() {
+
+
+        Assert.assertEquals("Company Structure",employeesPage.companyStructure.getText());
+    }
 }
 
 
