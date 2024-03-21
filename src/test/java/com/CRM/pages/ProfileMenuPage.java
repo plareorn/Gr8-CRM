@@ -20,4 +20,10 @@ public class ProfileMenuPage {
 
     @FindBy(xpath = "//span[.='My Profile']")
     public WebElement myProfileBtn;
+
+    @FindBy(xpath = "//a[.='General']")
+    public WebElement generalBtn;
+
+    @FindBy(xpath ="//td[@class='user-profile-nowrap-second']/a")
+    public WebElement underTheGeneralEmail;
 }
