@@ -33,9 +33,8 @@ public class LoginPage {
     public WebElement getRememberMeOnThisComputerCheckbox;
 
 
-
     /**
-     * This method will work reading user information from configuration.properties file
+     * This method you can provide a "username" and "password" by calling the login method and using ConfigurationReader to read the value
      *
      * @param username
      * @param password
@@ -48,8 +47,9 @@ public class LoginPage {
 
 
     /**
-     * This method use parameterization, it will read given userType from feature file and read the log in credentials
+     * This method use parameterization, it will read given userType from feature file and read the login credentials
      * from configuration.properties. userTypes are: "hr", "marketing", "helpdesk"
+     * you can call the login method and provide the string usertype as above examples and be able to log in
      *
      * @param userType
      */
