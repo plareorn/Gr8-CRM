@@ -1,4 +1,5 @@
 #Test Execution Number in Jira
+@wip
 Feature: CRM Application Upload Functionality
 
   User Story: As a user, I should be able to upload files and pictures for appreciation
@@ -33,12 +34,13 @@ Feature: CRM Application Upload Functionality
 
   #Acceptance Criteria 2:
   #Verify that the user can insert the files and images into the text.
+
   Scenario: HR User inserts files and images into the text
     Given user enters the hr user information
     When the user navigates to the upload page
     And the user selects a file to upload that accept files with the following formats: .pdf, .txt, .jpeg, .png, .docx
     Then the user should click on Insert in text button
-    ##And the file or image should be displayed appropriately within the appreciation box
+    And the file or image should be displayed appropriately within the appreciation box
 
 
   Scenario: HelpDesk User inserts files and images into the text
