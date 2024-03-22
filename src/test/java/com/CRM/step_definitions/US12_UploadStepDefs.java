@@ -48,14 +48,14 @@ public class US12_UploadStepDefs {
 
     @Then("the user should click on Insert in text button")
     public void theUserShouldClickOnInsertInTextButton() {
-
         appreciationPage.insertInTextButton.click();
     }
 
     @And("the file or image should be displayed appropriately within the appreciation box")
     public void theFileOrImageShouldBeDisplayedAppropriatelyWithinTheAppreciationBox() {
        Driver.getDriver().switchTo().frame(0);
-       appreciationPage.iframeElement.isDisplayed();
+       String image= appreciationPage.iframeElement.getAttribute("src");
+        System.out.println("image = " + image);
 
     }
 
