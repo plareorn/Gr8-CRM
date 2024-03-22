@@ -1,9 +1,12 @@
 package com.CRM.pages;
 
 import com.CRM.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class AppreciationPage {
 
@@ -24,7 +27,7 @@ public AppreciationPage(){
 @FindBy(name="bxu_files[]")
     public WebElement uploadFilesAndImagesButton;
 
-@FindBy(xpath="//span[@class='insert-btn-text']")
+@FindBy(xpath="//span[contains(text(),'Insert in text')]")
     public WebElement insertInTextButton;
 
 @FindBy(xpath = "//img[contains(@id,'bxid')]")
@@ -49,14 +52,7 @@ public static boolean isValidExtension(String fileName){
             extension.equals("jpeg") || extension.equals("png") ||
             extension.equals("docx");
 
-
-
-
 }
 
+    }
 
-
-
-
-
-}
