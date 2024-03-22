@@ -24,14 +24,17 @@ public AppreciationPage(){
 @FindBy(name="bxu_files[]")
     public WebElement uploadFilesAndImagesButton;
 
-@FindBy(xpath="//span[contains(text(),'Insert in text')]")
+@FindBy(xpath="//span[@class='insert-btn-text']")
     public WebElement insertInTextButton;
 
-@FindBy(tagName = "iframe")
+@FindBy(xpath = "(//iframe)[1]")
     public WebElement iframeElement;
 
 @FindBy(xpath="//a[contains(text(),'My Drive / Uploaded files')]")
     public WebElement filesUploadedText;
+
+@FindBy(xpath = "//span[@class='del-but']")
+    public WebElement removeButton;
 
 
 public static boolean isValidExtension(String fileName){
