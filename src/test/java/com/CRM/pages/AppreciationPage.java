@@ -27,7 +27,7 @@ public AppreciationPage(){
 @FindBy(xpath="//span[@class='insert-btn-text']")
     public WebElement insertInTextButton;
 
-@FindBy(xpath = "(//iframe)[1]")
+@FindBy(xpath = "//img[contains(@id,'bxid')]")
     public WebElement iframeElement;
 
 @FindBy(xpath="//a[contains(text(),'My Drive / Uploaded files')]")
