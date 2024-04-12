@@ -1,3 +1,5 @@
+@B32G8-244
+
 Feature: Functions on Company Structure under Employee menu
 
   # User Story: As a user, I should be able to use functions on Company Structure under Employee menu.
@@ -5,7 +7,7 @@ Feature: Functions on Company Structure under Employee menu
 
   # Acceptance Criteria:
   # 1. Verify that the Company Structure is visible for all user types.
-
+  @B32G8-244
   Scenario:  Verify that the Company Structure is visible for all user types.
     Given Users is on the home page of CRM
     When Users click on the Employees button option
@@ -13,7 +15,7 @@ Feature: Functions on Company Structure under Employee menu
 
     #Acceptance criteria:
   #2. Verify that the HR user can add a department from the Company Structure.
-
+  @B32G8-244
   Scenario:  Verify that the HR user can add a department from the Company Structure.
   Given HR User is on the home page of CRM
   When  HR User click on the Employee button option
@@ -22,7 +24,7 @@ Feature: Functions on Company Structure under Employee menu
 
   #Acceptance Criteria:
   #3.  Verify that the “ADD DEPARTMENT” button is not displayed for Helpdesk and Marketing users.
-
+  @B32G8-244
   Scenario:  Verify that the “ADD DEPARTMENT” button is not displayed for Helpdesk and Marketing users.
     Given Helpdesk user, and Marketing user are on the home page of CRM
     When Helpdesk user, and Marketing user click on the Employee button option
